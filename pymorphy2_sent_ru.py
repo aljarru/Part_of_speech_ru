@@ -4,9 +4,10 @@ import pymorphy2 as pm
 
 
 morph = pm.MorphAnalyzer()
-text=st.text_input('Введите предложение для разбора')
+st.title('Введите предложение для разбора')
+text=st.text_input('нажмите ENTER для ввода.')
 
-st.title("Выбор частей речи в предложении:")
+st.header("Выбор частей речи в Вашем предложении:")
 st.write(text)
 
 
@@ -49,5 +50,5 @@ for i,j in enumerate(li):
         text_new+='___________ '
     else:    
         text_new+= ' '+ j + ' '
-print(text_new)
-st.write(text_new)
+#print(text_new)
+st.markdown(text_new)
